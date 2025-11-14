@@ -1,27 +1,26 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 박지호
-  Date: 25. 11. 13.
-  Time: 오전 10:19
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%
-//email, password
+    request.setCharacterEncoding("UTF-8");
+    String name = request.getParameter("name");
+    String title = request.getParameter("title");
+    String age = request.getParameter("age");
     String email = request.getParameter("email");
-    String password = request.getParameter("password");
-
-
-
-
+    String content = request.getParameter("content");
 %>
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Form OK</title>
 </head>
 <body>
-이메일 : <%=email%><br>
-암호 : <%=password%><br>
+<h1>폼 결과</h1>
+<p>이름: <%= name %></p>
+<p>제목: <%= title %></p>
+<p>나이: <%= age %></p>
+<p>이메일: <%= email %></p>
+<p>내용:<br><pre><%= content %></pre></p>
 
+<a href="form.html">다시 입력</a>
 </body>
 </html>
