@@ -1,3 +1,3 @@
-FROM tomcat:9.0.112-jdk17-temurin
-COPY target/root.war /usr/local/tomcat/webapps/ROOT.war
+FROM tomcat:9.0
+ADD target/*.war /usr/local/tomcat/webapps/
 CMD ["catalina.sh", "run"]
